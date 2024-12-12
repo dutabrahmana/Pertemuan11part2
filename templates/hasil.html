@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result Page</h1>
+    <h2>Halo, <span id="user-name">{{ name }}!</span></h2>
+    <p class="motivational-quote">
+        "Setiap langkah kecil membawa Anda lebih dekat ke tujuan besar!"
+    </p>
+    <a href="/">Kembali ke Home</a>
+
+    <script>
+        // Script ini hanya sebagai ilustrasi untuk menggantikan placeholder jika data dikirimkan via JavaScript
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        if (name) {
+            document.getElementById('user-name').textContent = name;
+        }
+    </script>
+</body>
+</html>
